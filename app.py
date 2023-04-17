@@ -11,7 +11,7 @@ def hello_world():
 @app.route('/', methods=['POST'])
 def predict():
     imagefile = request.files['imageFile']
-    image_path = "./images/" + imagefile.filename
+    image_path = "./images2/" + imagefile.filename
     imagefile.save(image_path)
 
     caption = model.create_new_caption(image_path)
